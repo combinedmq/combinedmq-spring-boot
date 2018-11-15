@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.combinedmq</groupId>
+    <artifactId>combinedmq-spring-boot</artifactId>
+    <version>1.0.1</version>
+    <packaging>pom</packaging>
+
+    <name>CombinedMq Spring Boot</name>
+    <description>Spring Boot Support for combinedmq</description>
+    <url>https://github.com/combinedmq/combinedmq-spring-boot</url>
+
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>xiaoyu</name>
+            <email>xiaoyucoder@163.com</email>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:git@github.com:combinedmq/combinedmq-spring-boot.git</connection>
+        <developerConnection>scm:git:git@github.com:combinedmq/combinedmq-spring-boot.git</developerConnection>
+        <url>scm:git:git@github.com:combinedmq/combinedmq-spring-boot.git</url>
+    </scm>
+
+    <modules>
+        <module>combinedmq-spring-boot-autoconfigure</module>
+        <module>combinedmq-spring-boot-starter</module>
+        <module>combinedmq-spring-boot-samples</module>
+    </modules>
+
+    <properties>
+        <combinedmq.version>1.0.0</combinedmq.version>
+        <combinedmq-spring.version>1.0.1</combinedmq-spring.version>
+        <!--   <spring-boot.version>2.0.4.RELEASE</spring-boot.version>-->
+        <spring-boot.version>1.5.6.RELEASE</spring-boot.version>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.github.combinedmq</groupId>
+                <artifactId>combinedmq</artifactId>
+                <version>${combinedmq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.combinedmq</groupId>
+                <artifactId>combinedmq-spring</artifactId>
+                <version>${combinedmq-spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.combinedmq</groupId>
+                <artifactId>combinedmq-spring-boot-autoconfigure</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.combinedmq</groupId>
+                <artifactId>combinedmq-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.yml</include>
+                    <include>**/*.xml</include>
+                    <include>**/*.properties</include>
+                    <include>**/*.json</include>
+                    <include>**/*.txt</include>
+                    <include>**/*.md</include>
+                </includes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <!-- Source -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>3.0.1</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- Javadoc -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>3.0.1</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- GPG -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>oss</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                </snapshotRepository>
+                <repository>
+                    <id>oss</id>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
+</project>

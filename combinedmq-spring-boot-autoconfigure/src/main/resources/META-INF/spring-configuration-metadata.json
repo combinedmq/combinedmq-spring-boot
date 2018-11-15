@@ -1,0 +1,264 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties",
+      "name": "combinedmq",
+      "type": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties",
+      "name": "combinedmq.activemq",
+      "sourceMethod": "getActivemq()",
+      "type": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Activemq"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Activemq",
+      "name": "combinedmq.activemq.consumer-listener",
+      "sourceMethod": "getConsumerListener()",
+      "type": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Activemq$ConsumerListener"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Activemq",
+      "name": "combinedmq.activemq.producer-pool",
+      "sourceMethod": "getProducerPool()",
+      "type": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Activemq$ProducerPool"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties",
+      "name": "combinedmq.kafka",
+      "sourceMethod": "getKafka()",
+      "type": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka",
+      "name": "combinedmq.kafka.consumer-listener",
+      "sourceMethod": "getConsumerListener()",
+      "type": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka$ConsumerListener"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka",
+      "name": "combinedmq.kafka.producer-pool",
+      "sourceMethod": "getProducerPool()",
+      "type": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka$ProducerPool"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties",
+      "name": "combinedmq.rabbitmq",
+      "sourceMethod": "getRabbitmq()",
+      "type": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq",
+      "name": "combinedmq.rabbitmq.consumer-listener",
+      "sourceMethod": "getConsumerListener()",
+      "type": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq$ConsumerListener"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq",
+      "name": "combinedmq.rabbitmq.producer-pool",
+      "sourceMethod": "getProducerPool()",
+      "type": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq$ProducerPool"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Activemq",
+      "name": "combinedmq.activemq.broker-url",
+      "description": "Activemq's connection string",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Activemq$ConsumerListener",
+      "defaultValue": 1,
+      "name": "combinedmq.activemq.consumer-listener.concurrency",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Activemq",
+      "name": "combinedmq.activemq.password",
+      "description": "Activemq's users password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Activemq$ProducerPool",
+      "name": "combinedmq.activemq.producer-pool.expiry-timeout",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Activemq$ProducerPool",
+      "name": "combinedmq.activemq.producer-pool.idle-timeout",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Activemq$ProducerPool",
+      "name": "combinedmq.activemq.producer-pool.max-connections",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Activemq$ProducerPool",
+      "name": "combinedmq.activemq.producer-pool.time-between-expiration-check-millis",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Activemq",
+      "name": "combinedmq.activemq.username",
+      "description": "Activemq's permissions users",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka",
+      "name": "combinedmq.kafka.bootstrap-servers",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka$ConsumerListener",
+      "defaultValue": 1,
+      "name": "combinedmq.kafka.consumer-listener.concurrency",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka$ConsumerListener",
+      "defaultValue": 1,
+      "name": "combinedmq.kafka.consumer-listener.max-poll-record",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka$ProducerPool",
+      "name": "combinedmq.kafka.producer-pool.batch-size",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka$ProducerPool",
+      "name": "combinedmq.kafka.producer-pool.linger-millis",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka$ProducerPool",
+      "name": "combinedmq.kafka.producer-pool.max-idle",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka$ProducerPool",
+      "name": "combinedmq.kafka.producer-pool.max-total",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka$ProducerPool",
+      "name": "combinedmq.kafka.producer-pool.max-wait-millis",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka$ProducerPool",
+      "name": "combinedmq.kafka.producer-pool.min-evictable-idle-time-millis",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka$ProducerPool",
+      "name": "combinedmq.kafka.producer-pool.min-idle",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka$ProducerPool",
+      "name": "combinedmq.kafka.producer-pool.test-on-borrow",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka$ProducerPool",
+      "name": "combinedmq.kafka.producer-pool.test-on-return",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka$ProducerPool",
+      "name": "combinedmq.kafka.producer-pool.test-while-idle",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Kafka$ProducerPool",
+      "name": "combinedmq.kafka.producer-pool.time-between-eviction-runs-millis",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq$ConsumerListener",
+      "defaultValue": 1,
+      "name": "combinedmq.rabbitmq.consumer-listener.concurrency",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq$ConsumerListener",
+      "defaultValue": 1,
+      "name": "combinedmq.rabbitmq.consumer-listener.prefetch-count",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq",
+      "name": "combinedmq.rabbitmq.host",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq",
+      "name": "combinedmq.rabbitmq.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq",
+      "name": "combinedmq.rabbitmq.port",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq$ProducerPool",
+      "name": "combinedmq.rabbitmq.producer-pool.max-idle",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq$ProducerPool",
+      "name": "combinedmq.rabbitmq.producer-pool.max-total",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq$ProducerPool",
+      "name": "combinedmq.rabbitmq.producer-pool.max-wait-millis",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq$ProducerPool",
+      "name": "combinedmq.rabbitmq.producer-pool.min-evictable-idle-time-millis",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq$ProducerPool",
+      "name": "combinedmq.rabbitmq.producer-pool.min-idle",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq$ProducerPool",
+      "name": "combinedmq.rabbitmq.producer-pool.test-on-borrow",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq$ProducerPool",
+      "name": "combinedmq.rabbitmq.producer-pool.test-on-return",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq$ProducerPool",
+      "name": "combinedmq.rabbitmq.producer-pool.test-while-idle",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq$ProducerPool",
+      "name": "combinedmq.rabbitmq.producer-pool.time-between-eviction-runs-millis",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq",
+      "name": "combinedmq.rabbitmq.username",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.github.combinedmq.spring.boot.autoconfigure.CombinedMqProperties$Rabbitmq",
+      "name": "combinedmq.rabbitmq.virtual-host",
+      "type": "java.lang.String"
+    }
+  ]
+}
