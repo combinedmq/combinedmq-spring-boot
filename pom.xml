@@ -11,7 +11,7 @@
     <packaging>pom</packaging>
 
     <name>CombinedMq Spring Boot</name>
-    <description>Spring Boot Support for combinedmq</description>
+    <description>Spring Boot support for combinedmq</description>
     <url>https://github.com/combinedmq/combinedmq-spring-boot</url>
 
     <licenses>
