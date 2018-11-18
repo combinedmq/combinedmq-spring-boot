@@ -1,6 +1,3 @@
-server:
-  port: 9090
-
 combinedmq:
   rabbitmq:
     host: 10.1.7.22
@@ -10,14 +7,3 @@ combinedmq:
     virtualHost: /
     consumer-listener:
       concurrency: 5
-    producer-pool:
-      maxTotal: 100
-      maxIdle: 20
-      minIdle: 10
-      maxWaitMillis: 30000
-      minEvictableIdleTimeMillis: 60000
-      timeBetweenEvictionRunsMillis: 30000
-      testOnBorrow: false
-      testOnReturn: false
-      testWhileIdle: true
-

@@ -1,8 +1,8 @@
 package combinedmq.spring.boot.consumer;
 
 import com.github.combinedmq.spring.annotation.EnableCombinedMq;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 
 /**
  * @author xiaoyu
@@ -11,6 +11,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class ConsumerMain {
     public static void main(String[] args) {
-        SpringApplication.run(ConsumerMain.class, args);
+        new SpringApplicationBuilder(ConsumerMain.class).web(false).run(args);
     }
 }
