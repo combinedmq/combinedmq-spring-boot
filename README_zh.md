@@ -73,7 +73,7 @@ public class ConsumerMain {
     }
 }
 ```
-### Step 4: 实现发送者功能
+### Step 4: 实现生产者功能
 - application.yml配置
 
 ```yaml
