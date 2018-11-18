@@ -7,7 +7,7 @@
 
     <groupId>com.github.combinedmq</groupId>
     <artifactId>combinedmq-spring-boot</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>pom</packaging>
 
     <name>CombinedMq Spring Boot</name>
@@ -40,7 +40,7 @@
 
     <properties>
         <combinedmq.version>1.0.0</combinedmq.version>
-        <combinedmq-spring.version>1.0.1</combinedmq-spring.version>
+        <combinedmq-spring.version>1.0.2</combinedmq-spring.version>
         <!--<spring-boot.version>2.1.0.RELEASE</spring-boot.version>-->
         <spring-boot.version>1.5.6.RELEASE</spring-boot.version>
         <java.version>1.8</java.version>
@@ -81,14 +81,12 @@
         <resources>
             <resource>
                 <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.yml</include>
-                    <include>**/*.xml</include>
-                    <include>**/*.properties</include>
-                    <include>**/*.json</include>
-                    <include>**/*.txt</include>
-                    <include>**/*.md</include>
-                </includes>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
             </resource>
         </resources>
         <plugins>
