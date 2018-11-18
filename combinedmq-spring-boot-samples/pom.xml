@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.github.combinedmq</groupId>
         <artifactId>combinedmq-spring-boot</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
     </parent>
     <artifactId>combinedmq-spring-boot-samples</artifactId>
     <packaging>pom</packaging>
