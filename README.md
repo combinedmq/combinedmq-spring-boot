@@ -3,17 +3,16 @@ CombinedMq Spring Boot
 [![Build Status](https://travis-ci.com/combinedmq/combinedmq-spring-boot.svg?branch=master)](https://travis-ci.com/combinedmq/combinedmq-spring-boot)
 [![Maven Central](https://img.shields.io/maven-central/v/com.github.combinedmq/combinedmq-spring-boot.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.combinedmq%22%20AND%20a:%22combinedmq-spring-boot%22)
 
-[中文版文档](https://github.com/combinedmq/combinedmq-spring-boot/blob/master/README_zh.md)
+CombinedMq Spring Boot可以帮助您将CombinedMq集成到Spring Boot中，通过application.yml配置和使用注解的方式，能够非常方便的完成集成工作。
 
-CombinedMq Spring Boot can help you integrate CombinedMq into Spring Boot. The application.yml configuration and annotations make it easy to integrate.
-### Overview
-Using annotations to use Combined Mq involves four annotations:
-1. @Queue - Annotated on an interface type
-2. @Producer - Annotated on the member variable of the class, which should be an interface marked by @Queue to send the message
-3. @Consumer - Annotation on an implementation class of an interface annotated by @Queue to receive messages
-4. @EnableCombinedMq - Specify basePackages to enable scanning of @Queue annotations
-## Steps for usage
-### Step 1: Maven dependency
+### 概述
+使用注解的方式来使用CombinedMq，会涉及到四个注解:
+1. @Queue - 标注在一个接口类型上
+2. @Producer - 标注在类的成员变量上，该变量应该是一个由@Queue标注的接口,用来发送消息
+3. @Consumer - 标注在一个由@Queue标注的接口的实现类上，用来接收消息
+4. @EnableCombinedMq - 指定basePackages，开启对@Queue注解进行扫描的功能
+## 使用步骤
+### Step 1: Maven依赖
 
 ```xml
 <dependency>
@@ -22,17 +21,17 @@ Using annotations to use Combined Mq involves four annotations:
   <version>1.0.2</version>
 </dependency>
 ```
-### Step 2: Create an interface
+### Step 2: 创建一个接口
 
-All method return types of this interface can only be void type:
+该接口的所有方法返回类型都只能是void类型:
 ```java
 @Queue(name = "x.y.z")
 public interface GreetingService {
     void sayHi(String name);
 }
 ```
-### Step 3: Implement consumer function
-- application.yml configuration
+### Step 3: 实现消费者功能
+- application.yml配置
 
 ```yaml
 combinedmq:
@@ -46,7 +45,7 @@ combinedmq:
       concurrency: 5
 ```
 
-- Implement the GreetingService interface
+- 实现GreetingService接口
 
 ```java
 @Slf4j
@@ -61,7 +60,7 @@ public class GreetingServiceImpl implements GreetingService {
 }
 ```
 
-- Start the Spring Boot Consumer program
+- 启动Spring Boot Consumer程序
 
 ```java
 @EnableCombinedMq({"combinedmq"})
@@ -72,8 +71,8 @@ public class ConsumerMain {
     }
 }
 ```
-### Step 4: Implement producer function
-- application.yml configuration
+### Step 4: 实现生产者功能
+- application.yml配置
 
 ```yaml
 combinedmq:
@@ -94,7 +93,7 @@ combinedmq:
       testOnReturn: false
       testWhileIdle: true
 ```
-- Injecting Greeting Service with @Producer
+- 使用@Producer注入GreetingService
 
 ```java
 @Slf4j
@@ -113,7 +112,7 @@ public class GreetingController {
     }
 }
 ```
-- Start the Spring Boot Producer program
+- 启动Spring Boot Producer程序
 
 ```java
 @EnableCombinedMq({"combinedmq"})
@@ -124,8 +123,8 @@ public class ProducerMain {
     }
 }
 ```
-## Project modules
-CombinedMq Spring Boot consists of the following submodules:
+## 项目模块
+CombinedMq Spring Boot 由以下几个子模块组成:
 
 - [combinedmq-spring-boot-autoconfigure](https://github.com/combinedmq/combinedmq-spring-boot/tree/master/combinedmq-spring-boot-autoconfigure)
 
