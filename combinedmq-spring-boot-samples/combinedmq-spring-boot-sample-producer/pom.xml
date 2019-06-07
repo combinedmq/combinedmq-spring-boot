@@ -3,9 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>combinedmq-spring-boot-samples</artifactId>
-        <groupId>com.github.combinedmq</groupId>
-        <version>1.0.2</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.9.RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -19,11 +19,12 @@
         <dependency>
             <groupId>com.github.combinedmq</groupId>
             <artifactId>combinedmq-spring-boot-starter</artifactId>
+            <version>1.0.2</version>
         </dependency>
         <dependency>
             <groupId>com.github.combinedmq</groupId>
             <artifactId>combinedmq-spring-boot-sample-queue</artifactId>
-            <version>${project.version}</version>
+            <version>1.0.2</version>
         </dependency>
     </dependencies>
     <build>
